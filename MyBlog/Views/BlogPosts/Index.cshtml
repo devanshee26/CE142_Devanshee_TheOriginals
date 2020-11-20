@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MyBlog.Models.BlogPost>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 style="font-family:'Copperplate Gothic'; text-align:center">Your Section</h3>
+<hr />
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary">Post Now!</a>
+</p>
+
+<div class="card-columns">
+
+    @foreach (var item in Model)
+    {
+
+       
+        <!-- Bootstrap card -->
+        <div class="card col-md-10">
+            <img class="card-img-top" src="@("../wwwroot/Images/"+@item.ImagePathName)"  asp-append-version="true" style="margin-top:5%;" alt="Card image cap">
+
+            <!-- Card Body -->
+            <div class="card-body">
+                <!-- Card Title -->
+                <h3 class="card-title">  @Html.DisplayFor(modelItem => item.Title)</h3>
+
+                <!-- Card Text -->
+                <p class="card-text" style="width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 20px; font-size: 1rem; margin: 0; background: white;">@Html.DisplayFor(modelItem => item.Content)</p>
+
+                <!-- Card Action -->
+                <a asp-action="Edit" asp-route-id="@item.BlogPostId" class="btn btn-outline-primary btn-sm">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BlogPostId" class="btn btn-outline-success btn-sm">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BlogPostId" class="btn btn-outline-danger btn-sm">Delete</a>
+            </div>
+        </div>
+
+        <!--cards ends-->
+
+
+
+
+    }
+</div>
+

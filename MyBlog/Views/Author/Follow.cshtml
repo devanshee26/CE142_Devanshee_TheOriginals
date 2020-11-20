@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MyBlog.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 style="font-family:'Copperplate Gothic'; text-align:center">Your Friends</h3>
+<hr />
+
+<div class="card-columns" style="padding:2%;">
+
+    @foreach (var item in Model)
+    {
+
+        <div class="card col-md-10" style="width: 22.5rem; margin:2%">
+            <img class="card-img-top  img-responsive" style="margin-top:5%;" src="@("../wwwroot/Profile/"+@item.ImagePathName)" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title">@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</h4>
+                <p class="card-text">@Html.DisplayFor(modelItem => item.UserName)</p>
+                <p class="card-text">@Html.DisplayFor(modelItem => item.Email)</p>
+                <a class="btn btn-outline-danger" asp-controller="Author" asp-action="Unfollow" asp-route-id="@item.UserId">UnFollow</a>
+            </div>
+        </div>
+    }
+
+    </div>

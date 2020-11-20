@@ -1,0 +1,22 @@
+﻿@model MyBlog.Models.BlogPost
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div>
+    <div style="text-align:center">
+        <h1 style="font-family:'Century Schoolbook'"> @Html.DisplayFor(model => model.Title)</h1>
+        <br />
+        <h6 style="font-family: sans-serif;text-transform: uppercase;  opacity: 0.7;">BY @Html.DisplayFor(model => model.User.UserName)</h6>
+        <hr />
+    </div>
+    <div class="container-fluid" style="text-align:center">
+        <img class="img-responsive " src="@("../wwwroot/Images/"+Model.ImagePathName)" asp-append-version="true" style="width: auto; height: 195px;"  alt="Card image cap">
+        <hr />
+        @Html.DisplayFor(model => model.Content)
+    </div>
+</div>

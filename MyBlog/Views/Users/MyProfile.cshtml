@@ -1,0 +1,52 @@
+﻿@model User
+
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 style="font-family:'Copperplate Gothic'; text-align:center">Your Profile</h3>
+
+
+<div class="container col-md-auto" style="text-align:center">
+    
+    <div class="card col-md-auto border-success">
+        <br />
+        <div class="text-center">
+            <img class="rounded col-md-4 text-center " src="@("../wwwroot/Profile/"+Model.ImagePathName)"  alt="Card image cap">
+
+        </div>
+        <hr />
+        <div class="col-md-8 mx-auto">
+            <div class="card-title">
+                <b> UserName  : </b>
+                @Html.DisplayFor(modelItem => Model.UserName)
+            </div>
+            <div class="card-body">
+                <p>
+                    <b> Full Name  : </b>
+                    @Html.DisplayFor(modelItem => Model.FirstName)
+                    @Html.DisplayFor(modelItem => Model.LastName)
+                </p>
+                <p>
+                    <b> Email Id : </b>
+                    @Html.DisplayFor(modelItem => Model.Email)
+
+                </p>
+                <p>
+                    <b> Contact : </b>
+                    @Html.DisplayFor(modelItem => Model.Contact)
+
+                </p>
+                <p>
+                    <a asp-action="Edit" asp-route-id="@Model.UserId" class="btn btn-outline-primary btn-sm">Edit</a>
+
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
