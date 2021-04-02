@@ -1,6 +1,5 @@
 E:\SEMESTER5\WDDN\project\blog\MyBlog\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\SEMESTER5\WDDN\project\blog\MyBlog\bin\Debug\netcoreapp3.1\appsettings.json
-E:\SEMESTER5\WDDN\project\blog\MyBlog\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 E:\SEMESTER5\WDDN\project\blog\MyBlog\bin\Debug\netcoreapp3.1\MyBlog.exe
 E:\SEMESTER5\WDDN\project\blog\MyBlog\obj\Debug\netcoreapp3.1\MyBlog.csprojAssemblyReference.cache
 E:\SEMESTER5\WDDN\project\blog\MyBlog\obj\Debug\netcoreapp3.1\MyBlog.AssemblyInfoInputs.cache
@@ -199,3 +198,4 @@ E:\SEMESTER5\WDDN\project\blog\MyBlog\obj\Debug\netcoreapp3.1\Razor\Views\Author
 E:\SEMESTER5\WDDN\project\blog\MyBlog\obj\Debug\netcoreapp3.1\Razor\Views\Users\MyProfile.cshtml.g.cs
 E:\SEMESTER5\WDDN\project\blog\MyBlog\obj\Debug\netcoreapp3.1\Razor\Views\Author\Follow.cshtml.g.cs
 E:\SEMESTER5\WDDN\project\blog\MyBlog\obj\Debug\netcoreapp3.1\Razor\Views\Author\Friends.cshtml.g.cs
+E:\SEMESTER5\WDDN\project\blog\MyBlog\obj\Debug\netcoreapp3.1\scopedcss\bundle\MyBlog.styles.css

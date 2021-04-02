@@ -65,12 +65,14 @@ namespace MyBlog.Controllers
                 }
 
 
-
+                //identity table user added
                 var result = await userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     await signInManager.SignInAsync(user, isPersistent: false);
 
+
+                    //my user table => user added
                     _context.Add(model);
                     await _context.SaveChangesAsync();
                    
